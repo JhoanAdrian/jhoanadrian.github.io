@@ -38,15 +38,28 @@ body {
       color: #c0b6dc;
       text-decoration: none;
     }
-    body {
-      background-image: url('background.gif');
-      background-repeat: repeat;
-      background-size: cover;
-    }
-    
     
 @media screen and (max-width: 481px) {
   #descripcion {
     width: 90%;
   }
-}  
+  body {
+  margin: 0;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+#bouncer {
+  position: absolute;
+  width: 30px;   /* cambia aquí el tamaño que quieras */
+  height: 30px;
+  pointer-events: none;
+  user-select: none;
+  will-change: left, top, transform;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+}
